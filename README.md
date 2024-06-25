@@ -57,8 +57,16 @@ Follow these steps to set up the project locally:
     - Create a `.env` file in the root directory.
     - Add the following variables:
         ```
-        DATABASE_URL=your_database_url
-        JWT_SECRET=your_jwt_secret
+        DB_PASSWORD=
+        DB_DATABASE=
+        DB_HOST=
+        DB_PORT=
+        DB_DIALECT=
+        MYSQL_MAX=
+        MYSQL_MIN=
+        MYSQL_ACQUIRE=
+        MYSQL_IDLE=
+        JWT_SECRET=
         ```
 
 ## Usage
@@ -75,7 +83,7 @@ Follow these steps to set up the project locally:
 
 - **Login**
     ```http
-    POST /api/auth/login
+    POST /customer/login
     ```
 
 ### Orders
@@ -86,18 +94,12 @@ Follow these steps to set up the project locally:
     ```
     - Requires JWT authentication.
 
-### Products
-
-- **List Products**
-    ```http
-    GET /api/products
-    ```
 
 ### Items
 
 - **List Items for Product**
     ```http
-    GET /api/products/:productId/items
+    GET /order/list
     ```
 
 ## Testing
