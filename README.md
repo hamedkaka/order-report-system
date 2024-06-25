@@ -90,7 +90,7 @@ Follow these steps to set up the project locally:
 
 - **Get Order Report**
     ```http
-    GET /api/orders/:orderId/report
+    post /orders/checkout
     ```
     - Requires JWT authentication.
 
